@@ -5,8 +5,8 @@ require_once 'Prodotti.php';
 class Cellulari extends Prodotti {
     protected $scontoQuantita;
 
-    public function __construct($_codice, $_nome, $_prezzo, $_quantita, $_scontoQuantita = 1) {
-        parent::__construct($_codice, $_nome, $_prezzo, $_quantita);
+    public function __construct($_codice, $_nome, $_quantita, $_scontoQuantita = 1) {
+        parent::__construct($_codice, $_nome, $_quantita);
         $this->scontoQuantita = $_scontoQuantita;
     }
 

@@ -6,17 +6,21 @@ require_once 'classes/Cellulari.php';
 
 /* richiesta prodotti generici */
 
-$richiesta1 = new Prodotti('gen123', 'articoli_vari', 200, 50);
+$richiesta1 = new Prodotti('gen123', 'articoli_vari', 50);
 
+$richiesta1->setPrize(199);
 var_dump($richiesta1);
 
-var_dump($richiesta1->getPrize());
+var_dump('Prezzo prodotti: ' . $richiesta1->getPrize());
 
 /* richiesta cellulari con sconto quantita */
 
-$richiestaCellulari = new Cellulari('cell123', 'samsung_galaxy', 200, 50, 0.8);
+$richiestaCellulari = new Cellulari('cell123', 'samsung_galaxy', 50, 0.8);
+$richiestaCellulari->setPrize(299);
+
 var_dump($richiestaCellulari);
 
-var_dump($richiestaCellulari->getPrize());
+var_dump('Prezzo pieno cellulari: ' . $richiestaCellulari->nome . ' ' . $richiestaCellulari->getPrize()[0]);
+var_dump('Prezzo scontato cellulari: ' . $richiestaCellulari->nome . ' ' . $richiestaCellulari->getPrize()[1]);
 
 ?>
