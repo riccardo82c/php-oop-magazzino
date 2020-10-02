@@ -1,0 +1,1 @@
+<!-- Crea e modella classi, a piacere, per gestire i prodotti di un magazzino. -->
