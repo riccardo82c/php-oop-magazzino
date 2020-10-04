@@ -1,26 +1,28 @@
 <?php
 
+/* proprietà classe Prodotti */
 class Prodotti {
-    public $codice;
+    protected $codice;
     public $nome;
     protected $prezzo;
     protected $quantita;
 
+    //  costruttore Prodotti
     public function __construct($_codice, $_nome, $_quantita) {
         $this->codice = $_codice;
         $this->nome = $_nome;
-
         $this->quantita = $_quantita;
     }
 
-    public function getPrize() {
+    //  metodi Prodotti
+    public function getPrice() {
         if (empty($this->prezzo)) {
             die('Prezzo non inserito');
         }
         return $this->prezzo * $this->quantita;
     }
 
-    public function setPrize($_prezzo) {
+    public function setPrice($_prezzo) {
         $this->prezzo = $_prezzo;
     }
 
